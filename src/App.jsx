@@ -5,6 +5,8 @@ import RootLayout from "./layouts/RootLayout";
 // page
 import Home from "./page/Home";
 import ErrorPage from "./page/ErrorPage";
+import Cart from "./page/Cart";
+import SingleProductDetails from "./page/SingleProductDetails";
 
 function App() {
   const routes = createBrowserRouter([
@@ -16,6 +18,14 @@ function App() {
         {
           index: true,
           element: <Home />,
+        },
+        {
+          path: "/cart",
+          element: <Cart />,
+        },
+        {
+          path: "/singleProductDetails/:id",
+          element: <SingleProductDetails />,
         },
       ],
     },
