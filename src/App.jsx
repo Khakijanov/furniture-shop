@@ -7,6 +7,7 @@ import Home from "./page/Home";
 import ErrorPage from "./page/ErrorPage";
 import Cart from "./page/Cart";
 import SingleProductDetails from "./page/SingleProductDetails";
+import OurProducts from "./page/OurProducts";
 
 function App() {
   const routes = createBrowserRouter([
@@ -26,6 +27,10 @@ function App() {
         {
           path: "/singleProductDetails/:id",
           element: <SingleProductDetails />,
+        },
+        {
+          path: "/ourproducts",
+          element: <OurProducts />,
         },
       ],
     },

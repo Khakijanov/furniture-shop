@@ -50,7 +50,7 @@ function Navbar() {
                 <Link to={"/about"}>About</Link>
               </li>
               <li>
-                <Link to={"/products"}>Products</Link>
+                <Link to={"/ourproducts"}>Products</Link>
               </li>
               <li>
                 <Link to={"/cart"}>Cart</Link>
@@ -68,7 +68,7 @@ function Navbar() {
               <Link to={"/about"}>About</Link>
             </li>
             <li>
-              <Link to={"/products"}>Products</Link>
+              <Link to={"/ourproducts"}>Products</Link>
             </li>
             <li>
               <Link to={"/cart"}>Cart</Link>
