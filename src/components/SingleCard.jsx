@@ -1,14 +1,21 @@
 import { useSelector, useDispatch } from "react-redux";
 import { incrementOrder, calculateOrder } from "../features/ProductSlice";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function SingleCard({ item }) {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.order);
 
   const handleAddToCart = (id) => {
-    dispatch(incrementOrder(id));
-    dispatch(calculateOrder()); // `calculateOrder`ni chaqirish
+    try {
+      dispatch(incrementOrder(id));
+
+      dispatch(calculateOrder());
+      toast.success("You added a new product to the cart!");
+    } catch (error) {
+      toast.error("There was an issue adding the product to the cart.");
+    }
   };
 
   return (
